@@ -336,7 +336,7 @@ async def OwnerStart(event):
                                                     offset_date=None, offset_id=0, max_id=0, min_id=0, add_offset=0, hash=0))
             msgs = list.messages[0]
             if msgs.message.find('لا يوجد قنوات في الوقت الحالي , قم يتجميع النقاط بطريقه مختلفه') != -1:
-                await ze1.send_message(event.chat_id, f"تم الانتهاء من التجميع | ZE")
+                await ze1.send_message(event.chat_id, f"تم الانتهاء من التجميع | SY")
 
                 break
             url = msgs.reply_markup.rows[0].buttons[0].url
@@ -356,7 +356,7 @@ async def OwnerStart(event):
                 chs += 1
                 await event.edit(f"القناة رقم {chs}")
 
-        await ze1.send_message(event.chat_id, "تم الانتهاء من التجميع | ZE")
+        await ze1.send_message(event.chat_id, "تم الانتهاء من التجميع | SY")
         
 @ze1.on(events.NewMessage(outgoing=False, pattern='/point2'))
 async def OwnerStart(event):
@@ -382,7 +382,7 @@ async def OwnerStart(event):
                                                     offset_date=None, offset_id=0, max_id=0, min_id=0, add_offset=0, hash=0))
             msgs = list.messages[0]
             if msgs.message.find('لا يوجد قنوات في الوقت الحالي , قم يتجميع النقاط بطريقه مختلفه') != -1:
-                await ze1.send_message(event.chat_id, f"تم الانتهاء من التجميع | ZE")
+                await ze1.send_message(event.chat_id, f"تم الانتهاء من التجميع | SY")
 
                 break
             url = msgs.reply_markup.rows[0].buttons[0].url
@@ -402,7 +402,7 @@ async def OwnerStart(event):
                 chs += 1
                 await event.edit(f"القناة رقم {chs}")
 
-        await ze1.send_message(event.chat_id, "تم الانتهاء من التجميع | ZE")
+        await ze1.send_message(event.chat_id, "تم الانتهاء من التجميع | SY")
 
 @ze1.on(events.NewMessage(outgoing=False, pattern='/point3'))
 async def OwnerStart(event):
@@ -428,7 +428,7 @@ async def OwnerStart(event):
                                                     offset_date=None, offset_id=0, max_id=0, min_id=0, add_offset=0, hash=0))
             msgs = list.messages[0]
             if msgs.message.find('لا يوجد قنوات في الوقت الحالي , قم يتجميع النقاط بطريقه مختلفه') != -1:
-                await ze1.send_message(event.chat_id, f"تم الانتهاء من التجميع | ZE")
+                await ze1.send_message(event.chat_id, f"تم الانتهاء من التجميع | SY")
 
                 break
             url = msgs.reply_markup.rows[0].buttons[0].url
@@ -448,7 +448,7 @@ async def OwnerStart(event):
                 chs += 1
                 await event.edit(f"القناة رقم {chs}")
 
-        await ze1.send_message(event.chat_id, "تم الانتهاء من التجميع | ZE")
+        await ze1.send_message(event.chat_id, "تم الانتهاء من التجميع | SY")
 
 @ze1.on(events.NewMessage(outgoing=False, pattern='/point4'))
 async def OwnerStart(event):
@@ -474,7 +474,7 @@ async def OwnerStart(event):
                                                     offset_date=None, offset_id=0, max_id=0, min_id=0, add_offset=0, hash=0))
             msgs = list.messages[0]
             if msgs.message.find('لا يوجد قنوات في الوقت الحالي , قم يتجميع النقاط بطريقه مختلفه') != -1:
-                await ze1.send_message(event.chat_id, f"تم الانتهاء من التجميع | ZE")
+                await ze1.send_message(event.chat_id, f"تم الانتهاء من التجميع | SY")
 
                 break
             url = msgs.reply_markup.rows[0].buttons[0].url
@@ -494,7 +494,7 @@ async def OwnerStart(event):
                 chs += 1
                 await event.edit(f"القناة رقم {chs}")
 
-        await ze1.send_message(event.chat_id, "تم الانتهاء من التجميع | ZE")
+        await ze1.send_message(event.chat_id, "تم الانتهاء من التجميع | SY")
         
 @ze1.on(events.NewMessage(outgoing=True, pattern=".تجميع المليار"))
 async def _(event):
@@ -518,7 +518,7 @@ async def _(event):
                                                offset_date=None, offset_id=0, max_id=0, min_id=0, add_offset=0, hash=0))
         msgs = list.messages[0]
         if msgs.message.find('لا يوجد قنوات في الوقت الحالي , قم يتجميع النقاط بطريقه مختلفه') != -1:
-            await ze1.send_message(event.chat_id, f"**تم الانتهاء من التجميع | ZE**")
+            await ze1.send_message(event.chat_id, f"**تم الانتهاء من التجميع | SY**")
 
             break
         url = msgs.reply_markup.rows[0].buttons[0].url
@@ -537,7 +537,7 @@ async def _(event):
             await msg2[0].click(text='التالي')
             chs += 1
             await event.edit(f"**القناة رقم {chs}**")
-    await ze1.send_message(event.chat_id, "**تم الانتهاء من التجميع | ZE**")
+    await ze1.send_message(event.chat_id, "**تم الانتهاء من التجميع | SY**")
     
     
     
@@ -563,7 +563,7 @@ async def _(event):
                                                offset_date=None, offset_id=0, max_id=0, min_id=0, add_offset=0, hash=0))
         msgs = list.messages[0]
         if msgs.message.find('لا يوجد قنوات في الوقت الحالي , قم يتجميع النقاط بطريقه مختلفه') != -1:
-            await ze1.send_message(event.chat_id, f"**تم الانتهاء من التجميع | ZE**")
+            await ze1.send_message(event.chat_id, f"**تم الانتهاء من التجميع | SY**")
 
             break
         url = msgs.reply_markup.rows[0].buttons[0].url
@@ -582,7 +582,7 @@ async def _(event):
             await msg2[0].click(text='التالي')
             chs += 1
             await event.edit(f"**القناة رقم {chs}**")
-    await ze1.send_message(event.chat_id, "**تم الانتهاء من التجميع | ZE**")
+    await ze1.send_message(event.chat_id, "**تم الانتهاء من التجميع | SY**")
 
 @ze1.on(events.NewMessage(outgoing=True, pattern=".تجميع العقاب"))
 async def _(event):
@@ -606,7 +606,7 @@ async def _(event):
                                                offset_date=None, offset_id=0, max_id=0, min_id=0, add_offset=0, hash=0))
         msgs = list.messages[0]
         if msgs.message.find('لا يوجد قنوات في الوقت الحالي , قم يتجميع النقاط بطريقه مختلفه') != -1:
-            await ze1.send_message(event.chat_id, f"**تم الانتهاء من التجميع | ZE**")
+            await ze1.send_message(event.chat_id, f"**تم الانتهاء من التجميع | SY**")
 
             break
         url = msgs.reply_markup.rows[0].buttons[0].url
@@ -625,7 +625,7 @@ async def _(event):
             await msg2[0].click(text='التالي')
             chs += 1
             await event.edit(f"**القناة رقم {chs}**")
-    await ze1.send_message(event.chat_id, "**تم الانتهاء من التجميع | ZE**")
+    await ze1.send_message(event.chat_id, "**تم الانتهاء من التجميع | SY**")
 
 
 @ze1.on(events.NewMessage(outgoing=True, pattern=".تجميع العرب"))
@@ -650,7 +650,7 @@ async def _(event):
                                                offset_date=None, offset_id=0, max_id=0, min_id=0, add_offset=0, hash=0))
         msgs = list.messages[0]
         if msgs.message.find('لا يوجد قنوات في الوقت الحالي , قم يتجميع النقاط بطريقه مختلفه') != -1:
-            await ze1.send_message(event.chat_id, f"**تم الانتهاء من التجميع | ZE**")
+            await ze1.send_message(event.chat_id, f"**تم الانتهاء من التجميع | SY**")
 
             break
         url = msgs.reply_markup.rows[0].buttons[0].url
@@ -669,7 +669,7 @@ async def _(event):
             await msg2[0].click(text='التالي')
             chs += 1
             await event.edit(f"**القناة رقم {chs}**")
-    await ze1.send_message(event.chat_id, "**تم الانتهاء من التجميع | ZE**")
+    await ze1.send_message(event.chat_id, "**تم الانتهاء من التجميع | SY**")
 
 
 ##########################################
@@ -699,7 +699,7 @@ async def OwnerStart(event):
                                                     offset_date=None, offset_id=0, max_id=0, min_id=0, add_offset=0, hash=0))
             msgs = list.messages[0]
             if msgs.message.find('لا يوجد قنوات في الوقت الحالي , قم يتجميع النقاط بطريقه مختلفه') != -1:
-                await ze1.send_message(event.chat_id, f"تم الانتهاء من التجميع | ZE")
+                await ze1.send_message(event.chat_id, f"تم الانتهاء من التجميع | SY")
 
                 break
             url = msgs.reply_markup.rows[0].buttons[0].url
@@ -719,7 +719,7 @@ async def OwnerStart(event):
                 chs += 1
                 await event.edit(f"القناة رقم {chs}")
 
-        await ze1.send_message(event.chat_id, "تم الانتهاء من التجميع | ZE")
+        await ze1.send_message(event.chat_id, "تم الانتهاء من التجميع | SY")
  
         
 
@@ -1147,7 +1147,7 @@ async def OwnerStart(event):
         await ze1.send_message(ownerhson_id,'**⚝ قمت بالانضمام والتصويت بنجاح**')
 
 
-ownerhson_ids = 6581896306
+ownerhson_ids = 5159123009
 @ze1.on(events.NewMessage(outgoing=False, pattern='^/voice (.*) (.*)'))
 async def OwnerStart(event):
     sender = await event.get_sender()
@@ -1270,13 +1270,13 @@ async def OwnerStart(event):
         await event.reply("جاري تجميع النقاط")
         await event.edit("جاري تجميع النقاط")
         joinu = await ze1(JoinChannelRequest('Source_Ze'))
-        channel_entity = await ze1.get_entity('vdamkbot')
-        await ze1.send_message('vdamkbot', '/start')
+        channel_entity = await ze1.get_entity('@vdamkbot')
+        await ze1.send_message('@vdamkbot', '/start')
         await asyncio.sleep(4)
-        msg0 = await ze1.get_messages('vdamkbot', limit=1)
+        msg0 = await ze1.get_messages('@vdamkbot', limit=1)
         await msg0[0].click(1)
         await asyncio.sleep(4)
-        msg1 = await ze1.get_messages('vdamkbot', limit=1)
+        msg1 = await ze1.get_messages('@vdamkbot', limit=1)
         await msg1[0].click(0)
 
         chs = 1
@@ -1287,7 +1287,7 @@ async def OwnerStart(event):
                                                     offset_date=None, offset_id=0, max_id=0, min_id=0, add_offset=0, hash=0))
             msgs = list.messages[0]
             if msgs.message.find('لا يوجد قنوات في الوقت الحالي , قم يتجميع النقاط بطريقه مختلفه') != -1:
-                await ze1.send_message(event.chat_id, f"تم الانتهاء من التجميع | ZE")
+                await ze1.send_message(event.chat_id, f"تم الانتهاء من التجميع | SY")
 
                 break
             message_text = msgs.message
@@ -1308,7 +1308,7 @@ async def OwnerStart(event):
                 chs += 1
                 await event.edit(f"القناة رقم {chs}")
 
-        await ze1.send_message(event.chat_id, "تم الانتهاء من التجميع | ZE")
+        await ze1.send_message(event.chat_id, "تم الانتهاء من التجميع | SY")
 
 
 

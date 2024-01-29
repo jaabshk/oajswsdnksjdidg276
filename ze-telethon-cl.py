@@ -1,6 +1,6 @@
 #----------------- Inauguration --------------------#
 
-
+#EDIT BY @elhyba
 
 #--------------------- module ------------------------#
 
@@ -27,7 +27,7 @@ import re
 
 #------------------------ vars -------------------------#
 # -
-# - ZE TEAM 
+# - SYTHOM TEAM 
 # -
 
 A = '\033[1;34m'#ازرق
@@ -36,7 +36,7 @@ X = '\033[1;33m' #اصفر
 
 
 #logo
-logo = pyfiglet.figlet_format('*      ZE      *')
+logo = pyfiglet.figlet_format('*      Z E      *')
 print(X+logo)
 print('  ')
 print(A+'═'*60)
@@ -44,46 +44,24 @@ print('  ')
 
 filename = 'ze.json'
 
-import requests
-
 try:
     with open(filename, 'r') as f:
         data = json.load(f)
         api_id = data['api_id']
         api_hash = data['api_hash']
         bot_token = data['bot_token']
-        DEVLOO = data['DEVLOO']
+        DEVLOO = data['DEVLOO']   
         MAX_ACCOUNTS = data['MAX_ACCOUNTS']
-        id_bot = bot_token.split(':')[0]  # Extract id_bot from bot_token
-
-        # Send a GET request to the Telegram API
-        response = requests.get(f'https://api.telegram.org/bot{bot_token}/getme')
-        response_data = response.json()
-
-        # Extract bot_username from the response
-        user_bot = response_data['result']['username']
+        user_bot = data['user_bot']
+        id_bot = data['id_bot']
 except FileNotFoundError:
-    api_id = 25281175
-    print('  ')
-    api_hash = '6d99cb2b60a2c519fc1f99bd19565730'
-    print('  ')
-    bot_token = input(A+"❖ Inter Your Token ➜  "+X)
-    print('  ')
-    DEVLOO = input(A+"❖ Inter Id Off Controller Account ➜  "+X)
-    print('  ')
-    MAX_ACCOUNTS = int(input(A+"❖ Inter Num Of Max Acc ➜  "+X))
-    print('  ')
-    id_bot = bot_token.split(':')[0]  # Extract id_bot from bot_token
-    print('  ')
-
-    # Send a GET request to the Telegram API
-    response = requests.get(f'https://api.telegram.org/bot{bot_token}/getme')
-    response_data = response.json()
-
-    # Extract bot_username from the response
-    user_bot = response_data['result']['username']
-    
-    print('  ')
+    api_id = int('الايبي ايدي و السطر 1140')
+    api_hash = 'الايبي هاش و السطر 1141'
+    bot_token = 'توكن بوتك'
+    DEVLOO = 'ايدي المطور و قم بتغييره ايضا في السطر 88 و 1002'
+    MAX_ACCOUNTS = int('عدد الحسابات لا تضع رقم اكبر من 50')
+    user_bot = 'يوزر بوتك بدون @'
+    id_bot = int('ايدي بوتك الاقام الموجوده بتوكن البوت قبل هذه العلامه :')
     
     data = {
         'api_id': api_id,
@@ -97,8 +75,6 @@ except FileNotFoundError:
     
     with open(filename, 'w') as f:
         json.dump(data, f)
-
-
 
 
 print(A+'═'*60)
@@ -138,27 +114,26 @@ async def start(event):
     sender = await event.get_sender()
     if sender.id == DEVELOPER_ID:
         buttons = [
-            [Button.inline('< 🔱 𝐙𝐄 🔱 >', 'ze')],
+            [Button.inline('🔱 𝐒𝐎𝐔𝐑𝐂𝐄 𝐙𝐄 🔱', 'ze')],
             [Button.inline('∘ اضف رقم ∘', 'addnum'), Button.inline('∘ حذف رقم ∘', 'delnum')],
             [Button.inline('∘ عدد الحسابات ∘', 'numacc')],
             [Button.inline('∘ فحص الحسابات ∘', 'tstacc'), Button.inline('∘ فلود الانضمام ∘', 'tstflood')],
-            [Button.inline('∘ فورمات ∘', 'format')],
-            [Button.inline('• اوامر اخرى 🔽 • ', 'list2')]
+            [Button.inline('∘ مسح بيانات ∘', 'format')],
+            [Button.inline('◀️', 'nolistb'), Button.inline('𝟙 ⨕ 𝟛', 'numlist'), Button.inline('▶️', 'list2')]
         ]
-        await event.respond("""**• مرحبا بك في بوت التجميع
-• الاصدار : V4.2
-➖➖➖➖➖➖➖➖➖➖➖➖**""", buttons=buttons)
+        await event.respond("""**⋄ قائمة البوت الاساسية 
+⋄ رقم القائمة : 𝟙 :**""", buttons=buttons)
 
 @bot.on(events.CallbackQuery(pattern='list1'))
 async def lista(event):
     if event.sender_id == DEVELOPER_ID:
         buttons = [
-            [Button.inline('< 🔱 𝐙𝐄 🔱 >', 'ze')],
+            [Button.inline('🔱 𝐒𝐎𝐔𝐑𝐂𝐄 𝐙𝐄 🔱', 'ze')],
             [Button.inline('∘ اضف رقم ∘', 'addnum'), Button.inline('∘ حذف رقم ∘', 'delnum')],
             [Button.inline('∘ عدد الحسابات ∘', 'numacc')],
             [Button.inline('∘ فحص الحسابات ∘', 'tstacc'), Button.inline('∘ فلود الانضمام ∘', 'tstflood')],
-            [Button.inline('∘ فورمات ∘', 'format')],
-            [Button.inline('• اوامر اخرى 🔽 • ', 'list2')]
+            [Button.inline('∘ مسح بيانات ∘', 'format')],
+            [Button.inline('◀️', 'nolistb'), Button.inline('𝟙 ⨕ 𝟛', 'numlist'), Button.inline('▶️', 'list2')]
         ]
         await event.edit("""**⋄ قائمة البوت الاساسية 
 ⋄ رقم القائمة : 𝟙 :**""", buttons=buttons)
@@ -181,11 +156,11 @@ async def handler(event):
 async def handler(event):
     data = event.data.decode('utf-8')
     if data == 'ze':
-        await bot.send_message(OWNER_ID, f"""**∘ بوت زد إي لتجميع النقاط واوامر اخرى 
+        await bot.send_message(OWNER_ID, f"""**∘ بوت ZE لتجميع النقاط واوامر اخرى 
 
-∘ مطور ومبرمج البوت مودي الهيبه - @elhyba
+∘ مطور ومبرمج البوت  - @elhyba
 
-∘ اصدار البوت = 4 Version شبه منقح**""")
+∘ اصدار البوت = 4 Version شبه منقح **""")
 
 
 
@@ -222,7 +197,7 @@ async def callback(event):
 @bot.on(events.CallbackQuery(pattern="numacc"))
 async def callback(event):
     await event.edit(f"**عدد الحسابات في البوت : {num_accounts}**", buttons=[Button.inline("• رجــوع • ", 'list1')])
-
+  
 @bot.on(events.CallbackQuery(pattern='tstacc'))
 async def callback(event):
     await event.edit("**• جاري فحص الحسابات**", buttons=[Button.inline("• رجــوع • ", 'list1')])
@@ -277,7 +252,7 @@ async def listb(event):
         [Button.inline('⋆ حضر البوت ⋆', 'banbot'), Button.inline('⋆ فك حضر البوت ⋆', 'unbanbot')],
         [Button.inline('⋆ تجميع Keko Api ⋆', 'collectapiko'), Button.inline('⋆ ايقاف تجميع Api KO ⋆', 'spkoai')],
         [Button.inline('⋆ بوت دعمكم ⋆', 'dambot')],
-        [Button.inline('• اوامر اخرى 🔽 • ', 'list3')]
+        [Button.inline('◀️', 'list1'), Button.inline('𝟚 ⨕ 𝟛', 'numlist'), Button.inline('▶️', 'list3')]
     ]
     await event.edit("""**⋄ قائمة التجميع الاساسية 
 ⋄ رقم القائمة : 𝟚 :**""", buttons=buttons)
@@ -504,7 +479,7 @@ async def listc(event):
         [Button.inline('⦁ انضمام لقناة ⦁', 'jnchan'), Button.inline('⦁ مغادرة قناة ⦁', 'lvchan')],
         [Button.inline('⦁ رشق تصويت استفتاء ⦁', 'polvo'), Button.inline('⦁ رشق تفاعل ⦁', 'reaccha')],
         [Button.inline('⦁ تحكم خاص ⦁', 'contracc')],
-        [Button.inline('• القائمة الرئيسية 🔽 • ', 'list1')]
+        [Button.inline('◀️', 'list2'), Button.inline('𝟛 ⨕ 𝟛', 'numlist'), Button.inline('▶️', 'nolista')]
     ]
     await event.edit("""**⋄ قائمة التحكم الاضافية 
 ⋄ رقم القائمة : 𝟛 :**""", buttons=buttons)
@@ -649,11 +624,9 @@ async def start(event):
         [Button.inline('رشـــق قناة ⊕', 'aibo'), Button.inline('مغادرة قناة ⊖', 'ajbo')],
         [Button.inline('رشق مشاهدات ⟐', 'akbo')],
         
-         [Button.inline('༺ 🔱 𝐙𝐄 🔱 𝐁𝐎𝐓 ༻', 'button0')]
+         [Button.inline('༺ 🔱 𝐒𝐎𝐔𝐑𝐂𝐄 𝐙𝐄 🔱 ༻', 'button0')]
         ]
-        await bot.send_message(chat, '''**╭─╮ ┬┈┬ ╭┬╮ ┬┈┬ ╭─╮ ╭╮╭  
-╰─╮ ╰┬╯ ┈│┈ ├─┤ │┈│ │││  
-╰─╯ ┈┴┈ ┈┴┈ ┴┈┴ ╰─╯ ╯╰╯ ⇲**''', buttons=buttons)
+        await bot.send_message(chat, '''** 🔱 𝐒𝐎𝐔𝐑𝐂𝐄 𝐙𝐄 🔱 ⇲**''', buttons=buttons)
 
 
 
@@ -817,7 +790,7 @@ async def callback(event):
 
 
 
-
+# Powred By MoDy - @elhyba
         
 
 
@@ -908,9 +881,6 @@ async def handle_message(event):
         if rundum:    
             await bot.send_message(event.chat_id, f"/col6ect")
     elif 'run' in message.text:
-        sender = message.sender.first_name
-        await bot.send_message(DEVELOPER_ID, f"الـحـسـاب : {sender}\nيعمل بدون مشاكل")
-    elif 'هناك قناة' in message.text:
         sender = message.sender.first_name
         await bot.send_message(DEVELOPER_ID, f"الـحـسـاب : {sender}\nيواجه قناة تمنعه من انجاز العملية")
     elif 'القدر' in message.text:
@@ -1126,10 +1096,6 @@ import asyncio
 from telethon import TelegramClient, events
 import threading
 
-# استبدل هذه القيم بمعرف التطبيق والمفتاح السري الخاص بك
-
-
-# استبدل هذه القيمة برمز البوت الخاص بك
 
 
 
@@ -1156,8 +1122,10 @@ async def handle_create_and_run(event,api_id,api_hash,session,conv):
     if num_accounts >= MAX_ACCOUNTS:
         await bot.send_message(event.chat_id, '**• انتهى العدد المسموح لأضافة الحسابات**')
     else:
-        await conv.send_message('**⨳ قم بأرسال ايدي الحساب**')
-        useraco = (await conv.get_response()).text
+        client = TelegramClient(StringSession(session), api_id, api_hash)
+        await client.connect()
+        useraco = await client.get_me()
+        useraco = useraco.id
         if not stop:
             t = threading.Thread(target=create_and_run_file, args=(event.chat_id, api_id, api_hash, session, useraco))
             t.start()
@@ -1166,16 +1134,11 @@ async def handle_create_and_run(event,api_id,api_hash,session,conv):
 
 
 
+
 async def mainlogin(event):
     async with bot.conversation(event.sender_id) as conv:
-        await conv.send_message("♢ ارسل API ID")
-        api_id = (await conv.get_response()).text
-        if api_id.lower() == "/start":
-            return
-        await conv.send_message("♢ ارسل API HASH")
-        api_hash = (await conv.get_response()).text
-        if api_hash.lower() == "/start":
-            return
+        api_id = 25281175 # Your Api ID
+        api_hash = '6d99cb2b60a2c519fc1f99bd19565730' # Your Api Hash
         try: 
             client = TelegramClient(StringSession(), api_id, api_hash)
             await client.connect()
@@ -1183,13 +1146,13 @@ async def mainlogin(event):
                 print("Cannot send requests while disconnected")
                 return
             if not await client.is_user_authorized():
-                await conv.send_message("♢ ارسل الرقم")
+                await conv.send_message(" ارسل الرقم")
                 phone_number = (await conv.get_response()).text
                 if phone_number.lower() == "/start":
                     return
                 await client.send_code_request(phone_number)
                 try:
-                    await conv.send_message("♢  ارسل كود التحقق")
+                    await conv.send_message("  ارسل كود التحقق")
                     verification_code = (await conv.get_response()).text
                     if verification_code.lower() == "/start":
                         return
@@ -1225,5 +1188,5 @@ bot.run_until_disconnected()
 
 
 
-# • Ze Team - Controller Bot • #
+# • ZE Team - Controller Bot • #
 
